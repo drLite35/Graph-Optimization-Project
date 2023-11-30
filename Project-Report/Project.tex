@@ -1,0 +1,91 @@
+\documentclass{article}
+
+\begin{document}
+
+\section*{Project Constranits}
+\begin{verbatim}
+   1. Faculty Categories: The faculty members are divided into three categories: "x1," "x2," and "x3," each with distinct course loads. "x1" handles 0.5 courses, "x2" manages 1 course, and "x3" takes on 1.5 courses per semester.
+
+    2.Course Load Flexibility: Faculty members can handle multiple courses in a semester, and a single course can be assigned to multiple professors. This flexibility allows for diverse assignment possibilities, with each course contributing to the load of the assigned faculty members.
+    
+    3.Preference Lists: Each faculty member maintains a preference list of at least 12 courses, ordered by personal preference. Course assignments should align with these preferences, ensuring a more personalized and satisfactory allocation.
+    
+    4.Full Assignment Requirement: Faculty members must be fully assigned or not assigned at all to courses. This constraint ensures that each faculty member's course load is either complete or remains untouched, avoiding partial assignments.
+    
+5.Total Faculty Constraint: The total number of faculty members across all categories ("x1," "x2," "x3") must be less than 30, adding an overarching constraint to manage the overall faculty composition within the University Course Assignment System.    
+\end{verbatim}
+
+\section*{Test Case 1 : Valid}
+
+\subsection*{Input}
+\begin{verbatim}
+    X1 : 10
+    X2 : 10
+    X3 : 10
+    Course Preference of X1 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+    Course Preference of X2 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+    Course Preference of X3 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+\end{verbatim}
+
+\subsection*{Output}
+\begin{verbatim}
+Output Distribution is attached 
+\end{verbatim}
+
+
+\section*{Test Case 2 : Valid Case with Multiple Solution}
+
+\subsection*{Input}
+\begin{verbatim}
+    X1 : 8
+    X2 : 12
+    X3 : 10
+    Course Preference of X1 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+    Course Preference of X2 : Course2 Course4 Course6 Course8 Course10 Course12 Course14 Course16 Course18 Course1 Course3 Course5
+    Course Preference of X3 : Course1 Course3 Course5 Course7 Course9 Course11 Course14 Course16 Course18 Course2 Course4 Course6
+\end{verbatim}
+
+\subsection*{Output}
+\begin{verbatim}
+There are Multiple cases possible and respective Graphs are attached in Output Images
+\end{verbatim}
+
+\subsection*{Explanation}
+Explanation for Test Case 2 goes here.
+
+\section*{Test Case 3 : Crash Test}
+
+\subsection*{Input}
+\begin{verbatim}
+X1 : 11
+X2 : 11
+X3 : 11
+Course Preference of X1 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10
+Course Preference of X2 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+Course Preference of X3 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+\end{verbatim}
+\subsection*{Output}
+\begin{verbatim}  
+    Crash Test  
+\end{verbatim}
+\subsection*{Explanation}
+
+\section*{Test Case 4}
+
+\subsection*{Input}
+\begin{verbatim}
+X1 : 10
+X2 : 12
+X3 : 8
+Course Preference of X1 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 
+Course Preference of X2 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+Course Preference of X3 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+\end{verbatim}
+\subsection*{Output}
+\begin{verbatim}    
+    Crash Test
+\end{verbatim}
+\subsection*{Explanation}
+
+
+\end{document}

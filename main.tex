@@ -1,0 +1,64 @@
+\documentclass[twoside]{article}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{lipsum}
+
+\geometry{a4paper, margin=1in}
+
+\begin{document}
+
+\title{Optimizing University Course Assignment System}
+\author{Your Name}
+\date{\today}
+\maketitle
+
+\section*{PROBLEM STATEMENT}
+
+The research problem focuses on optimizing the University Course Assignment System within a department. Faculty members are categorized into three distinct groups (\(x1\), \(x2\), \(x3\)), each handling different course loads. Professors can take multiple courses, and a single course can be assigned to multiple professors, with a shared load of 0.5 courses. Faculty members maintain preference lists, and the objective is to maximize course assignments aligning with preferences and category-based constraints.
+
+This problem is unique due to the flexibility it offers regarding the number of courses faculty members can take, distinct from typical assignment problems.
+
+\section*{Problem Constraints}
+
+\begin{enumerate}
+    \item \textbf{Faculty Categories:} Professors are divided into "x1," "x2," and "x3," each with specific course loads.
+    \item \textbf{Course Load Flexibility:} Faculty can handle multiple courses, and a single course can be assigned to multiple professors.
+    \item \textbf{Preference Lists:} Each faculty maintains a preference list of at least 12 courses, ordered by personal preference.
+    \item \textbf{Full Assignment Requirement:} Faculty must be fully assigned or not assigned at all to courses.
+    \item \textbf{Total Faculty Constraint:} The total number of faculty members across all categories must be less than 30.
+\end{enumerate}
+
+\section*{METHOD ADOPTED}
+
+Initially, a brute force method was attempted, but it proved impractical due to the large solution space. Python, with libraries like NumPy, NetworkX, and Matplotlib, was then employed. Each professor provides a preference list, and courses are assigned based on preferences.
+
+The optimization problem is modeled as a bipartite graph, where one set of nodes represents faculty members, another set represents courses, and edges between them represent preferences.
+
+\textbf{Mathematics behind the graph:} Let \(U\) be the set of faculty members, \(V\) be the set of courses, and \(E\) be the set of edges connecting faculty members to courses based on preferences. The maximum bipartite matching algorithm finds the largest possible set of non-overlapping edges in \(E\), ensuring each faculty member is either fully assigned or not assigned at all.
+
+The total course load for each faculty member is calculated by summing the loads associated with the courses they are assigned.
+
+\begin{enumerate}[label= \arabic*.]
+    \item \textbf{Bipartite Graph Creation:} The function \texttt{create\_bipartite\_graph} creates a bipartite graph using the NetworkX library. It adds faculty nodes (\texttt{bipartite=0}) and course nodes (\texttt{bipartite=1}) to the graph. Edges are added based on the preferences of each faculty member, connecting them to the corresponding courses.
+    \item \textbf{Maximum Bipartite Matching:} The function \texttt{perform\_matching} uses the NetworkX library to find the maximum bipartite matching in the created graph. The algorithm ensures that each faculty member is either fully assigned to courses or not assigned at all. It prints the matching results, showing which courses are assigned to which faculty members.
+    \item \textbf{Matrix Representation:} The code utilizes a matrix to represent the final course assignments. Each row corresponds to a faculty member, and each column corresponds to a course. The matrix is filled with faculty member names, indicating the assignment of courses.
+    \item \textbf{Input Validation:} The \texttt{validate\_preferences} function ensures that each faculty member has exactly 12 preferences, and these preferences are valid courses. The main function, \texttt{optimize\_course\_assignment}, takes user inputs for faculty categories, the number of professors in each category, course loads, and faculty preferences. It also validates the total number of professors to ensure it does not exceed a predefined limit.
+    \item \textbf{Visualization:} The code includes a visualization of the bipartite graph using Matplotlib, providing a graphical representation of faculty-course relationships.
+\end{enumerate}
+
+\section*{Optimization Logic}
+
+The optimization aims to maximize the satisfaction of faculty members by considering their preferences while also meeting the constraints of course loads. The maximum bipartite matching algorithm efficiently solves this assignment problem, ensuring that each faculty member is assigned courses based on their preferences, and the total course load is distributed optimally among the faculty.
+
+\section*{RESULTS}
+
+The algorithm successfully assigns courses to faculty, considering preferences and constraints. Visualization aids in understanding the optimized course assignment.
+
+\lipsum[1-4]  % Include some dummy text
+
+\section*{CONCLUSION}
+
+The developed optimization scheme effectively addresses the University Course Assignment System problem. By leveraging bipartite graph concepts and maximum matching algorithms, the approach ensures faculty satisfaction while meeting category-based constraints.
+
+\end{document}

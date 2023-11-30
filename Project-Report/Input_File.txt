@@ -1,0 +1,42 @@
+This file Includes 8 Different Test Cases :-
+
+Test Case - 1: Amount of Courses Available in University = 12 - Valid
+X1 : 10
+X2 : 10
+X3 : 10
+Course Preference of X1 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+Course Preference of X2 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+Course Preference of X3 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+
+
+Test Case - 2: Amount of Courses Available in University = 20 - Valid
+X1 : 8
+X2 : 12
+X3 : 10
+Course Preference of X1 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+Course Preference of X2 : Course2 Course4 Course6 Course8 Course10 Course12 Course14 Course16 Course18 Course1 Course3 Course5
+Course Preference of X3 : Course1 Course3 Course5 Course7 Course9 Course11 Course14 Course16 Course18 Course2 Course4 Course6
+
+
+
+Test Case - 3: Invalid Number of professors - Crash Test
+X1 : 11
+X2 : 11
+X3 : 11
+Course Preference of X1 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10
+Course Preference of X2 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+Course Preference of X3 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+
+
+
+
+Test Case - 4: Invalid Preference List - Crash -test
+X1 : 10
+X2 : 12
+X3 : 8
+Course Preference of X1 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 
+Course Preference of X2 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+Course Preference of X3 : Course1 Course2 Course3 Course4 Course5 Course6 Course7 Course8 Course9 Course10 Course11 Course12
+
+
+There are Many More Test Cases Possible almost equal to the all permutation we can do with the courses preferences amount of course that is being offered etc
