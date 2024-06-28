@@ -27,11 +27,11 @@ The research problem focuses on optimizing the University Course Assignment Syst
 
 ## Table of Contents
 
-1. [Bipartite Graphs]
-2. [Maximum Bipartite Matching]
-3. [Graph Optimization]
-4. [NetworkX Library]
-
+1. [Bipartite Graphs](#bipartite-graphs)
+2. [Maximum Bipartite Matching](#maximum-bipartite-matching)
+3. [Graph Optimization](#graph-optimization)
+4. [Code Overview](#code-overview)
+5. [Usage](#usage)
 
 
 ## Bipartite Graphs
@@ -66,7 +66,7 @@ def create_bipartite_graph(faculty_categories, course_loads, preferences, all_co
 
 ## Maximum Bipartite Matching 
 
-## Code Snippet
+### Code Snippet
 
 ```python
 # Function to perform maximum bipartite matching and calculate total load
@@ -114,14 +114,8 @@ The provided Python code uses the NetworkX library for graph representation and 
 
 ## Usage
 
-1. Run the `optimize_course_assignment` function in the provided Python script.
+1. Run the `Disco_Final.py` function in the provided Python script.
 2. Enter the number of professors in each category, along with their preference lists.
 3. View the generated bipartite graph and the results of the course assignment.
 
-
-## Directory Structure
-
-```plaintext
-- Disco_Final.py   # Main.tex
-- README.md                        # Project documentation
 
